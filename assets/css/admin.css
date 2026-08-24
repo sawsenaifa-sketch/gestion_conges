@@ -1,0 +1,471 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f7f8fa;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: #1a1d29;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 24px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid #2a2e3d;
+    margin-bottom: 16px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 12px;
+}
+
+.nav-item {
+    display: block;
+    padding: 11px 14px;
+    color: #a0a4b8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.nav-item:hover {
+    background: #23273a;
+    color: white;
+}
+
+.nav-item.active {
+    background: #4f46e5;
+    color: white;
+}
+
+.sidebar-footer {
+    padding: 12px;
+    border-top: 1px solid #2a2e3d;
+    margin-top: 16px;
+}
+
+.nav-item.logout {
+    color: #f87171;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    margin-left: 240px;
+    padding: 32px 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.topbar h1 {
+    font-size: 22px;
+    color: #1a1a1a;
+}
+
+.user-badge {
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #eaeaea;
+}
+
+/* Stats cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid #eaeaea;
+}
+
+.stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.stat-icon.blue { background: #eef2ff; }
+.stat-icon.purple { background: #f5f0ff; }
+.stat-icon.orange { background: #fff7ed; }
+.stat-icon.green { background: #f0fdf4; }
+
+.stat-info { display: flex; flex-direction: column; }
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #8a8f98;
+}
+
+/* Panel */
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #eaeaea;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.panel-header h2 {
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.link-btn {
+    color: #4f46e5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    color: #8a8f98;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    text-align: left;
+    font-size: 12px;
+    color: #8a8f98;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.data-table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+/* Alert success */
+.alert-success {
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #bbf7d0;
+}
+
+/* Inline form */
+.inline-form {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-form input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.inline-form input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+}
+
+/* Badge */
+.badge {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Actions dans le tableau */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.btn-edit:hover {
+    background: #e0e7ff;
+}
+
+.btn-delete {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.btn-delete:hover {
+    background: #fee2e2;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-box h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background: #f3f4f6;
+    color: #374151;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background: #e5e7eb;
+}
+.badge-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.badge-link:hover {
+    background: #e0e7ff;
+}
+
+.back-link {
+    display: inline-block;
+    color: #8a8f98;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.back-link:hover {
+    color: #4f46e5;
+}
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.grid-form input,
+.grid-form select {
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.grid-form input:focus,
+.grid-form select:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+.grid-form button {
+    grid-column: span 3;
+}
+
+.badge-admin {
+    background: #fef2f2;
+    color: #dc2626;
+}
+.btn-accept {
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-accept:hover {
+    background: #dcfce7;
+}
+
+.conflict-warning {
+    display: inline-block;
+    color: #ea580c;
+    font-size: 11px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+/* =========================================================
+   AJOUTS POUR LA PAGE DEMANDES (Gestion des Congés)
+   ========================================================= */
+
+/* Styles des badges de statut pour les demandes */
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #ffedd5;
+}
+
+.status-accepted {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #dcfce7;
+}
+
+.status-refused {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fee2e2;
+}
+
+/* Style de l'alerte de conflit */
+.conflict-warning {
+    display: block;
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px dashed #fca5a5;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 6px;
+    width: fit-content;
+}
+
+/* Harmonisation des boutons dans la cellule d'action */
+.actions-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-accept {
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #bbf7d0;
+    transition: background 0.15s;
+}
+
+.btn-accept:hover {
+    background: #dcfce7;
+}
